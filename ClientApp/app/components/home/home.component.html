@@ -1,0 +1,16 @@
+<h1>Projekty</h1>
+<hr />
+<form [formGroup]="newBoardForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Nazwa" formControlName="name">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Opis" formControlName="description">
+    </div>
+    <button type="submit" class="btn btn-success pull-right">Dodaj projekt</button>
+</form>
+<hr />
+<div *ngFor="let board of boards" class="row">
+    <span>{{board.name}}</span> |
+    <span>{{board.description}}</span>
+</div>
