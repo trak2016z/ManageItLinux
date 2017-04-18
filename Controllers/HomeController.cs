@@ -10,13 +10,7 @@ namespace WebApplicationBasic.Controllers
     public class HomeController : Controller
     {
 
-        private readonly ManageItContext _context;
-
-        public HomeController(ManageItContext context)
-        {
-            _context = context;
-        }
-
+ 
         public IActionResult Index()
         {
             return View();
